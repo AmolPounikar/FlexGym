@@ -1,0 +1,71 @@
+
+/* Overriding general app styles for our premium gym website */
+#root {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+/* Premium hover card effects */
+.card-effect {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card-effect:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 30px -10px rgba(14, 165, 233, 0.25);
+}
+
+/* Glowing hover effects */
+.glow-on-hover:hover {
+  box-shadow: 0 0 15px rgba(14, 165, 233, 0.7);
+}
+
+/* Premium text glow effect */
+.text-glow {
+  text-shadow: 0 0 10px rgba(14, 165, 233, 0.7);
+}
+
+/* Premium button hover effects */
+.premium-button {
+  transition: all 0.3s ease;
+  background: linear-gradient(90deg, #0ea5e9, #33C3F0);
+  border: none;
+  background-size: 200% auto;
+}
+
+.premium-button:hover {
+  background-position: right center;
+  box-shadow: 0 5px 15px rgba(14, 165, 233, 0.4);
+}
+
+/* Image zoom effect */
+.img-zoom {
+  transition: transform 0.8s ease;
+}
+
+.img-zoom:hover {
+  transform: scale(1.05);
+}
+
+/* Add AOS animation fallbacks */
+[data-aos] {
+  pointer-events: none;
+}
+[data-aos].aos-animate {
+  pointer-events: auto;
+}
+
+html:not(.no-js) [data-aos^=fade][data-aos^=fade].aos-animate {
+  opacity: 1;
+  transform: none;
+}
+
+/* Premium glassmorphism effects */
+.glass-card {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
